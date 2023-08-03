@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="app.css">
+	<meta charset="ISO-8859-1">
+	<title>Change PIN</title>
+</head>
+
+<body>
+	<div class="formContainer">
+		<form id="from" method="post" action="changePIN">
+			<div class="header">
+				<h1>Change PIN</h1>
+			</div>
+			<table>
+				<tr>
+					<td><label class="label" for="op">Current PIN</label></td>
+					<td><input class="input" type="text" name="op"></td>
+				</tr>
+				<br>
+				<tr>
+					<td><label class="label" for="np">New PIN</label></td>
+					<td><input class="input" type="text" name="np"></td>
+				</tr>
+				<br>
+				<tr>
+					<td><label class="label" for="cp">Confirm PIN</label></td>
+					<td><input class="input" type="text" name="cp"></td>
+				</tr>
+			</table>
+			<div class="button">
+				<input id="LoginButton" type="submit" value="Change PIN">
+			</div>
+			<a href="Home.jsp" class="LinkButton">Back</a>
+	</div>
+</body>
+
+</html>
