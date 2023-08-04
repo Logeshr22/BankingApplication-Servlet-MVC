@@ -148,8 +148,16 @@ public class BankApp {
 
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next() == true) {
+				bank_id = rs.getInt("bank_id");
+				bank_name = rs.getString("bank_name");
+				ifsc = rs.getString("ifsc");
 				acc_no = rs.getInt("acc_no");
+				pin = rs.getInt("pin");
+				customer_id = rs.getInt("customer_id");
 				customer_name = rs.getString("customer_name");
+				balance = rs.getInt("balance");
+				email = rs.getString("email");
+				phone = rs.getLong("phone");
 				return true;
 			}
 		} catch (Exception e) {
@@ -188,5 +196,4 @@ public class BankApp {
 		}
 		return false;
 	}
-	
 }

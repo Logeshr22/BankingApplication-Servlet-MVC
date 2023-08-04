@@ -25,6 +25,7 @@ public class LoginController extends HttpServlet {
 		boolean loginStatus = curBankApp.login();
 		if (loginStatus) {
 			System.out.println(curBankApp.getAcc_no());
+			session.setAttribute("curBankApp", curBankApp);
 			session.setAttribute("acc_no", curBankApp.getAcc_no());
 			session.setAttribute("customer_name", curBankApp.getCustomer_name());
 			resp.sendRedirect("/BankingApplication-Servlet-MVC/Home.jsp");
